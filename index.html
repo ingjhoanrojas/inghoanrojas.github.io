@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Community Manager &  | Estrategia de Contenido y Resultados Garantizados</title>
+    <title>Community Manager & Filmmaker | Estrategia de Contenido y Resultados Garantizados</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- VARIABLES GLOBALES --- */
+        /* --- VARIABLES GLOBALES (MANTENIDAS INTACTAS) --- */
         :root {
-            /* --- PALETA AMARILLO/ORO RESTAURADA --- */
             --primary-color: #FFC72C; /* Amarillo Oro para CTAs y acentos principales */
             --secondary-color: #E8A800; /* Amarillo oscuro para efectos hover */
             --dark-bg: #0A0A0A; /* Negro profundo, fondo principal */
@@ -40,7 +39,6 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
-            /* COMPENSACIÓN POR EL NAVBAR FIJO */
             padding-top: 70px; 
         }
 
@@ -64,27 +62,27 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(10, 10, 10, 0.95); /* Fondo oscuro semitransparente */
+            background-color: rgba(10, 10, 10, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 999;
             padding: 15px 20px;
             display: flex;
-            justify-content: center; /* Centrado de todos los elementos */
+            justify-content: center;
             align-items: center;
-            gap: 40px; /* Espaciado consistente entre elementos */
+            gap: 40px;
         }
 
         .navbar .nav-logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--title-color); /* Usamos el oro para el logo/nombre */
+            color: var(--title-color);
             text-decoration: none;
         }
 
         .navbar .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px; /* Espaciado entre enlaces */
+            gap: 30px;
             align-items: center;
         }
 
@@ -100,10 +98,9 @@
             color: var(--primary-color);
         }
 
-        /* Estilo específico para el CTA principal en el nav */
         .navbar .cta-nav-download {
             background-color: var(--primary-color);
-            color: var(--dark-bg); /* Texto oscuro para alto contraste */
+            color: var(--dark-bg);
             border-radius: 5px;
             padding: 8px 15px;
         }
@@ -116,7 +113,7 @@
         /* --- HEADER / BANNER --- */
         .header-banner {
             position: relative;
-            height: calc(100vh - 70px); /* Ajustamos la altura para no ocultarse bajo el navbar */
+            height: calc(100vh - 70px);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -148,19 +145,20 @@
         .header-banner h1 {
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             margin-bottom: 1rem;
-            color: var(--title-color); /* Aplicamos el oro al H1 */
+            color: var(--title-color);
         }
 
         .header-banner p {
             font-size: clamp(1rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
-            color: var(--text-light); /* Texto de la frase en blanco */
+            color: var(--text-light);
+            max-width: 800px; /* Mejora la legibilidad en pantallas grandes */
         }
 
         .cta-primary {
             display: inline-block;
             background-color: var(--primary-color);
-            color: var(--dark-bg); /* Texto oscuro para alto contraste */
+            color: var(--dark-bg);
             padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
@@ -179,13 +177,13 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: var(--title-color); /* Aplicamos el oro a los títulos de sección */
+            color: var(--title-color);
         }
 
-        /* --- DISEÑO DE PORTAFOLIO (SWIPER CORREGIDO) --- */
+        /* --- DISEÑO DE PORTAFOLIO (SWIPER) --- */
         .design-swiper {
             width: 100%;
-            padding: 20px 0 40px 0; /* Padding para la paginación inferior */
+            padding: 20px 0 40px 0;
         }
 
         .design-swiper .swiper-slide {
@@ -193,9 +191,8 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            /* Forzar una relación de aspecto consistente (ej. 4:3) */
             aspect-ratio: 4 / 3;
-            display: flex; /* Centra la imagen verticalmente si es necesario */
+            display: flex;
             align-items: center;
             justify-content: center;
         }
@@ -204,7 +201,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Hace que la imagen cubra el espacio sin deformarse */
+            object-fit: cover;
         }
 
         .design-swiper .swiper-pagination-bullet {
@@ -236,7 +233,7 @@
         .slide-text h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            color: var(--title-color); /* Aplicamos el oro */
+            color: var(--title-color);
         }
         .slide-text p.role {
             color: var(--primary-color);
@@ -255,7 +252,7 @@
         .slide-media {
             flex: 1;
             background: #000;
-            position: relative; /* Necesario para el iframe */
+            position: relative;
         }
         .slide-media video,
         .slide-media iframe {
@@ -264,8 +261,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Mantiene la proporción y cubre el área */
-            border: 0; /* Quita el borde del iframe */
+            object-fit: cover;
+            border: 0;
         }
         .swiper-button-next,
         .swiper-button-prev {
@@ -276,7 +273,7 @@
         .social-proof-links {
             margin-top: 20px;
             padding-top: 15px;
-            border-top: 1px solid #2e2e2e; /* Separador sutil */
+            border-top: 1px solid #2e2e2e;
         }
 
         .social-proof-links a {
@@ -289,43 +286,21 @@
             padding: 8px 15px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            color: var(--dark-bg); /* Texto oscuro por defecto para contraste */
+            color: var(--dark-bg);
         }
 
         .social-proof-links i {
             margin-right: 8px;
         }
 
-        /* Estilos específicos para las redes sociales más comunes */
-        .social-proof-links .btn-instagram {
-            background-color: #E4405F; /* Instagram */
-        }
-        .social-proof-links .btn-instagram:hover {
-            background-color: #c93751;
-        }
-
-        .social-proof-links .btn-facebook {
-            background-color: #1877F2; /* Facebook */
-        }
-        .social-proof-links .btn-facebook:hover {
-            background-color: #1a5ac5;
-        }
-
-        .social-proof-links .btn-tiktok {
-            background-color: #000000; /* TikTok */
-            border: 1px solid var(--text-light);
-            color: var(--text-light); /* Excepción para TikTok */
-        }
-        .social-proof-links .btn-tiktok:hover {
-            background-color: #333333;
-        }
-
-        .social-proof-links .btn-linkedin {
-            background-color: #0A66C2; /* LinkedIn */
-        }
-        .social-proof-links .btn-linkedin:hover {
-            background-color: #074786;
-        }
+        .social-proof-links .btn-instagram { background-color: #E4405F; }
+        .social-proof-links .btn-instagram:hover { background-color: #c93751; }
+        .social-proof-links .btn-facebook { background-color: #1877F2; }
+        .social-proof-links .btn-facebook:hover { background-color: #1a5ac5; }
+        .social-proof-links .btn-tiktok { background-color: #000000; border: 1px solid var(--text-light); color: var(--text-light); }
+        .social-proof-links .btn-tiktok:hover { background-color: #333333; }
+        .social-proof-links .btn-linkedin { background-color: #0A66C2; }
+        .social-proof-links .btn-linkedin:hover { background-color: #074786; }
         
         /* --- CONTACTO --- */
         .contact-section {
@@ -340,7 +315,6 @@
         }
         .contact-form input,
         .contact-form textarea,
-        /* Estilo para el campo <select> */
         .contact-form select { 
             background-color: var(--dark-bg);
             border: 1px solid #444;
@@ -353,13 +327,11 @@
             -moz-appearance: none;
             appearance: none;
         }
-        /* Estilo para el placeholder y opción deshabilitada en el <select> */
         .contact-form option:disabled,
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
             color: var(--gray-text);
         }
-        /* Fuerza el color blanco para las opciones seleccionables */
         .contact-form option {
             color: var(--text-light);
             background-color: var(--dark-bg);
@@ -367,7 +339,7 @@
         
         .contact-form button {
             background-color: var(--primary-color);
-            color: var(--dark-bg); /* Texto oscuro para alto contraste */
+            color: var(--dark-bg);
             border: none;
             padding: 15px;
             border-radius: 8px;
@@ -395,7 +367,7 @@
         }
         .cta-cv {
             background-color: var(--primary-color);
-            color: var(--dark-bg); /* Texto oscuro para alto contraste */
+            color: var(--dark-bg);
             padding: 10px 20px;
             border-radius: 50px;
             transition: background-color 0.3s ease;
@@ -411,11 +383,9 @@
                 gap: 15px;
                 padding: 15px;
             }
-            
             .navbar .nav-links {
                 gap: 20px;
             }
-            
             .slide-content {
                 flex-direction: column;
                 height: auto;
@@ -438,42 +408,35 @@
     </nav>
     
     <header class="header-banner">
-        <!-- CAMBIO 1: Video de Fondo del Header -->
-        <!-- REEMPLAZA 'mi-carpeta-media' y 'video-de-fondo.mp4' con tus nombres reales -->
         <video autoplay loop muted playsinline class="video-background">
-            <source src="media/Videobanner.MP4" type="video/mp4">
+            <source src="media/video-de-fondo.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
         
         <h1>Ingeniero Jhoan Antonio Rojas López</h1>
-        <p>Fusionando Estrategia Digital y Producción Audiovisual de Alto Rendimiento.</p><p> Soy un motor de aprendizaje continuo, listo para llevar tu proyecto al siguiente nivel con ambición y resultados verificables.</p>
+        <!-- CAMBIO SOLICITADO: Nueva descripción profesional para el header -->
+        <p>Ing. Jhoan Rojas (24). Consultor Full-Stack y Estratega Digital. Experiencia en CM (+1.5 años, +500 vistas/post) , Edición Audiovisual y Programación Web/Móvil. Especialista en SEO: Logré posicionar 10 términos de búsqueda clave en los primeros lugares. Soluciones técnicas para conversión.</p>
         <a href="#contacto" class="cta-primary">Empecemos a Crear | Contactar</a>
     </header>
     
     <section id="acerca-de-mi" style="background-color: var(--dark-bg);">
-        <h2 class="section-title">Mi Trayectoria  laboral</h2>
+        <h2 class="section-title">Mi Trayectoria Laboral</h2>
         <div class="swiper trayectoria-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Fundamento Ingenieril</h3>
-                            <p class="role">Base Analítica y Sistemática</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 1 -->
+                            <h3>Ingeniería de Sistemas</h3>
+                            <p class="role">Desarrollo de Aplicaciones</p>
                             <ul>
-                                <li><strong>Formación:</strong> Ingeniería con especialización en análisis y resolución de problemas complejos.</li>
-                                <li><strong>Aplicación:</strong> Metodología estructurada aplicada al Marketing Digital y CRO.</li>
-                                <li><strong>Enfoque:</strong> Diseño de sistemas que generan resultados medibles y escalables.</li>
+                                <li><strong>Tecnologías:</strong> Desarrollo robusto de aplicaciones móviles y web utilizando Java y XML.</li>
+                                <li><strong>Backend:</strong> Implementación de Firebase para autenticación de usuarios y almacenamiento en la nube en tiempo real.</li>
+                                <li><strong>Resultado:</strong> Creación de soluciones escalables y funcionales con una base técnica sólida.</li>
                             </ul>
-                            
-                            <div class="social-proof-links">
-                                <a href="#casos-de-exito" class="cta-primary" style="padding: 8px 15px; margin-right: 0;">
-                                    <i class="fas fa-chart-line"></i> Ver Resultados
-                                </a>
-                            </div>
-                            
                         </div>
                         <div class="slide-media">
-                            <img src="https://placehold.co/600x500/FFC72C/000000?text=Ingeniería+Digital" alt="Fundamento Ingenieril Aplicado al Marketing">
+                            <img src="https://placehold.co/600x500/FFC72C/000000?text=Ingeniería+de+Sistemas" alt="Desarrollo de Apps con Java y Firebase">
                         </div>
                     </div>
                 </div>
@@ -481,29 +444,18 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Aprendizaje Continuo</h3>
-                            <p class="role">Motor de Crecimiento y Actualización</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 2 -->
+                            <h3>Estrategia & Growth en Bruli</h3>
+                            <p class="role">Contenido y Edición Audiovisual</p>
                             <ul>
-                                <li><strong>Mentalidad:</strong> Obsesión por dominar las últimas herramientas y tendencias digitales.</li>
-                                <li><strong>Especialización:</strong> SEO avanzado, automatización de marketing, Meta/Google Ads.</li>
-                                <li><strong>Compromiso:</strong> Mantener a los clientes siempre un paso adelante de la competencia.</li>
+                                <li><strong>Planificación:</strong> Diseño y ejecución de estrategias de contenido digital enfocadas en el sector inmobiliario.</li>
+                                <li><strong>Producción:</strong> Edición profesional de podcasts y reels para potenciar la marca y generar leads.</li>
+                                <li><strong>Herramientas:</strong> Dominio de software de edición como DaVinci Resolve y Filmora para crear contenido de alto impacto.</li>
                             </ul>
-
-                            <div class="social-proof-links">
-                                <a href="#diseno-grafico" class="btn-linkedin">
-                                    <i class="fas fa-palette"></i> Ver Portafolio
-                                </a>
-                                <a href="#contacto" class="btn-facebook">
-                                    <i class="fas fa-envelope"></i> Contactar
-                                </a>
-                            </div>
-
                         </div>
                         <div class="slide-media">
-                            <!-- CAMBIO 2: Video del Slider de Trayectoria (Slide 2) -->
-                            <!-- REEMPLAZA 'mi-carpeta-media' y 'video-trayectoria-2.mp4' con tus nombres reales -->
                             <video class="swiper-video" autoplay muted loop playsinline>
-                                <source src=""media/TIPPARAENCONTRARTRABAJO.MP4"" type="video/mp4">
+                                <source src="media/TIPPARAENCONTRARTRABAJO.MP4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -512,27 +464,17 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Fusión de Talentos</h3>
-                            <p class="role">Community Manager & Filmmaker</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 3 -->
+                            <h3>SEO & Automatización ITI</h3>
+                            <p class="role">Posicionamiento y Marketing Automatizado</p>
                             <ul>
-                                <li><strong>Estrategia:</strong> Creación de contenido con propósito y métricas claras.</li>
-                                <li><strong>Ejecución:</strong> Producción audiovisual de alto impacto emocional.</li>
-                                <li><strong>Resultado:</strong> Campañas integrales que conectan y convierten.</li>
+                                <li><strong>SEO:</strong> Posicionamiento exitoso de 10 palabras clave en los primeros resultados de búsqueda de Google.</li>
+                                <li><strong>Redes Sociales:</strong> Rescate y reactivación de perfiles sociales, alcanzando un récord de alcance en solo 2 semanas.</li>
+                                <li><strong>Automatización:</strong> Creación de chatbots interactivos con ManyChat para @cleymiti, mejorando la interacción y el servicio al cliente.</li>
                             </ul>
-
-                            <div class="social-proof-links">
-                                <a href="#casos-de-exito" class="btn-instagram">
-                                    <i class="fab fa-instagram"></i> Ver Proyectos
-                                </a>
-                            </div>
-                            
                         </div>
                         <div class="slide-media">
-                            <!-- CAMBIO 3: Reemplazo de Iframe de YouTube por Video Local (Slide 3) -->
-                            <!-- REEMPLAZA 'mi-carpeta-media' y 'video-trayectoria-3.mp4' con tus nombres reales -->
-                            <video class="swiper-video" autoplay muted loop playsinline>
-                                <source src="mi-carpeta-media/video-trayectoria-3.mp4" type="video/mp4">
-                            </video>
+                            <img src="https://placehold.co/600x500/6c757d/FFFFFF?text=SEO+y+Automatización" alt="Proyecto de SEO y Automatización">
                         </div>
                     </div>
                 </div>
@@ -567,35 +509,24 @@
     </section>
 
     <section id="casos-de-exito">
-        <h2 class="section-title">Portafolio de videos</h2>
+        <h2 class="section-title">Portafolio de Videos</h2>
         <div class="swiper case-studies-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Campaña de Lanzamiento para Marca X</h3>
-                            <p class="role">Community Manager | Filmmaker</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 1 -->
+                            <h3>Contenido Inmobiliario</h3>
+                            <p class="role">Edición de Video para Ventas</p>
                             <ul>
-                                <li><strong>Logro:</strong> Aumento del 300% en el engagement y visibilidad orgánica.</li>
-                                <li><strong>Métrica:</strong> Alcanzamos 1M+ de impresiones en 48h (Meta Ads + Contenido Orgánico).</li>
-                                <li><strong>Resultado:</strong> Crecimiento de seguidores del 15% en una semana.</li>
+                                <li><strong>Proyecto:</strong> Edición de un Reel dinámico y atractivo para la venta de una propiedad de lujo.</li>
+                                <li><strong>Enfoque:</strong> Resaltar las características clave del inmueble mediante narrativa visual y musicalización envolvente.</li>
+                                <li><strong>Resultado:</strong> Contenido optimizado para redes sociales, diseñado para captar la atención y generar interés de compra.</li>
                             </ul>
-                            
-                            <div class="social-proof-links">
-                                <a href="#" target="_blank" class="btn-instagram">
-                                    <i class="fab fa-instagram"></i> Ver Instagram
-                                </a>
-                                <a href="#" target="_blank" class="btn-tiktok">
-                                    <i class="fab fa-tiktok"></i> Ver TikTok
-                                </a>
-                            </div>
-                            
                         </div>
                         <div class="slide-media">
-                            <!-- CAMBIO 4: Video del Slider de Casos de Éxito (Slide 1) -->
-                            <!-- REEMPLAZA 'mi-carpeta-media' y 'caso-exito-1.mp4' con tus nombres reales -->
                             <video class="swiper-video" autoplay muted loop playsinline>
-                                <source src="mi-carpeta-media/caso-exito-1.mp4" type="video/mp4">
+                                <source src="media/VideoInmobiliario.MP4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -604,29 +535,18 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Estrategia de Contenido para Empresa Y (B2B)</h3>
-                            <p class="role">Estratega de Social Media | Editor</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 2 -->
+                            <h3>Estrategia Marca Personal</h3>
+                            <p class="role">Creación de Contenido de Autoridad</p>
                             <ul>
-                                <li><strong>Logro:</strong> Posicionamiento como referente en el sector B2B.</li>
-                                <li><strong>Métrica:</strong> Tasa de interacción promedio del 8% (superior a la competencia B2B).</li>
-                                <li><strong>Resultado:</strong> Generación de 50 leads cualificados al mes (vía embudo automatizado).</li>
+                                <li><strong>Proyecto:</strong> Desarrollo de contenido viral y de autoridad para el CEO de la marca Bruli.</li>
+                                <li><strong>Formatos:</strong> Producción de podcasts y videos virales para posicionar al CEO como un referente en su sector.</li>
+                                <li><strong>Resultado:</strong> Aumento significativo de la visibilidad y credibilidad de la marca personal a través de contenido estratégico.</li>
                             </ul>
-
-                            <div class="social-proof-links">
-                                <a href="#" target="_blank" class="btn-linkedin">
-                                    <i class="fab fa-linkedin-in"></i> Ver LinkedIn
-                                </a>
-                                <a href="#" target="_blank" class="btn-facebook">
-                                    <i class="fab fa-facebook-f"></i> Ver Facebook
-                                </a>
-                            </div>
-
                         </div>
                         <div class="slide-media">
-                            <!-- CAMBIO 5: Video del Slider de Casos de Éxito (Slide 2) -->
-                            <!-- REEMPLAZA 'mi-carpeta-media' y 'caso-exito-2.mp4' con tus nombres reales -->
                             <video class="swiper-video" autoplay muted loop playsinline>
-                                <source src="mi-carpeta-media/caso-exito-2.mp4" type="video/mp4">
+                                <source src="media/VideoBruli.MP4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -635,51 +555,19 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Producción de Video Publicitario para Producto Z</h3>
-                            <p class="role">Filmmaker | Editor de Video</p>
+                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 3 -->
+                            <h3>Automatización Educativa</h3>
+                            <p class="role">Chatbots y Estrategia de Contenido</p>
                             <ul>
-                                <li><strong>Logro:</strong> Crear un anuncio emocionalmente impactante con enfoque CRO.</li>
-                                <li><strong>Métrica:</strong> Tasa de visualización completa del 75% en YouTube Ads.</li>
-                                <li><strong>Resultado:</strong> Incremento de ventas del 20% tras el lanzamiento de la campaña de Ads.</li>
+                                <li><strong>Proyecto:</strong> Implementación de un bot de ManyChat para la cuenta de Instagram @cleymiti.</li>
+                                <li><strong>Estrategia:</strong> Creación de una secuencia de automatización para nutrir leads y responder preguntas frecuentes.</li>
+                                <li><strong>Resultado:</strong> Se logró un alcance promedio de 500 vistas por post y una interacción mejorada gracias a la respuesta inmediata del bot.</li>
                             </ul>
-
-                            <div class="social-proof-links">
-                                <a href="#" target="_blank" class="btn-instagram">
-                                    <i class="fab fa-instagram"></i> Ver Campaña
-                                </a>
-                            </div>
-                            
                         </div>
                         <div class="slide-media">
-                            <!-- CAMBIO 6: Video del Slider de Casos de Éxito (Slide 3) -->
-                            <!-- REEMPLAZA 'mi-carpeta-media' y 'caso-exito-3.mp4' con tus nombres reales -->
                             <video class="swiper-video" autoplay muted loop playsinline>
-                                <source src="mi-carpeta-media/caso-exito-3.mp4" type="video/mp4">
+                                <source src="media/VideoCley.MP4" type="video/mp4">
                             </video>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="slide-content">
-                        <div class="slide-text">
-                            <h3>Gestión de Crisis para Compañía A</h3>
-                            <p class="role">Community Manager Principal</p>
-                            <ul>
-                                <li><strong>Logro:</strong> Mitigar el impacto negativo en la reputación de la marca en entornos digitales.</li>
-                                <li><strong>Métrica:</strong> Reducción de comentarios negativos en un 90% en 72 horas.</li>
-                                <li><strong>Resultado:</strong> Recuperación de la confianza del público y refuerzo de la imagen de marca.</li>
-                            </ul>
-
-                            <div class="social-proof-links">
-                                <a href="#" target="_blank" class="cta-primary" style="padding: 8px 15px; margin-right: 0;">
-                                    <i class="fas fa-globe"></i> Ir a Sitio Web
-                                </a>
-                            </div>
-                            
-                        </div>
-                        <div class="slide-media">
-                            <img src="https://placehold.co/600x500/6c757d/FFFFFF?text=Gestión+de+Crisis" alt="Imagen de Caso de Estudio de Gestión de Crisis">
                         </div>
                     </div>
                 </div>
@@ -701,7 +589,8 @@
                 <option value="Filmmaking_Ads">Producción de Video Publicitario (Filmmaker)</option>
                 <option value="Design_Branding">Diseño Gráfico y Branding</option>
                 <option value="Full_Service">Servicio Integral (CM + Video + Diseño)</option>
-                <option value="CRO_Consultancy">Optimización de Conversiones (CRO) y Analítica</option>
+                <!-- CAMBIO SOLICITADO: Nueva opción en el formulario de contacto -->
+                <option value="SEO_Automation">Optimización SEO y Automatización</option>
             </select>
             
             <textarea name="message" rows="5" placeholder="Cuéntame brevemente sobre tu proyecto, el objetivo de negocio que buscas y el presupuesto aproximado." required></textarea>
@@ -726,23 +615,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
-            // Función para controlar videos en los sliders
             const handleVideoPlayback = (swiper) => {
-                // Pausar todos los videos
                 const allVideos = swiper.el.querySelectorAll('video');
-                /* NOTA: Esta sección para iframes ya no es necesaria si solo usas videos locales. Puedes eliminarla si lo deseas.
-                const allIframes = swiper.el.querySelectorAll('iframe');
-                allIframes.forEach(iframe => {
-                    const src = iframe.src;
-                    if (src.includes('youtube.com')) {
-                         iframe.src = src.replace(/autoplay=0/, 'autoplay=1');
-                    }
-                });
-                */
-
                 allVideos.forEach(video => video.pause());
 
-                // Reproducir el video en el slide activo
                 const activeSlide = swiper.slides[swiper.activeIndex];
                 const activeVideo = activeSlide.querySelector('video');
                 if (activeVideo) {
@@ -750,32 +626,24 @@
                 }
             };
 
-            // --- INICIALIZACIÓN DE SWIPERS ---
-            // Slider de Diseño Gráfico con autoplay y tamaño uniforme
             const designSwiper = new Swiper('.design-swiper', {
-                slidesPerView: 1, // Muestra 1 slide en móviles
+                slidesPerView: 1,
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
-                    delay: 2500, // 2.5 segundos por slide
+                    delay: 2500,
                     disableOnInteraction: false,
                 },
                 pagination: {
                     el: '.design-swiper .swiper-pagination',
                     clickable: true,
                 },
-                // Puntos de quiebre para mostrar más slides en pantallas más grandes
                 breakpoints: {
-                    640: { // En tablets y más
-                        slidesPerView: 2,
-                    },
-                    1024: { // En desktops
-                        slidesPerView: 3,
-                    }
+                    640: { slidesPerView: 2; },
+                    1024: { slidesPerView: 3; }
                 }
             });
 
-            // Slider de Trayectoria y Compromiso con autoplay
             const trayectoriaSwiper = new Swiper('.trayectoria-swiper', {
                 direction: 'horizontal',
                 slidesPerView: 1,
@@ -790,12 +658,8 @@
                     prevEl: '.trayectoria-swiper .swiper-button-prev',
                 },
                 on: {
-                    init: function () {
-                        handleVideoPlayback(this);
-                    },
-                    slideChange: function () {
-                        handleVideoPlayback(this);
-                    }
+                    init: function () { handleVideoPlayback(this); },
+                    slideChange: function () { handleVideoPlayback(this); }
                 },
                 breakpoints: {
                     768: {
@@ -805,7 +669,6 @@
                 }
             });
 
-            // Slider Horizontal de Casos de Estudio con autoplay
             const caseStudiesSwiper = new Swiper('.case-studies-swiper', {
                 direction: 'horizontal',
                 slidesPerView: 1,
@@ -820,12 +683,8 @@
                     prevEl: '.case-studies-swiper .swiper-button-prev',
                 },
                 on: {
-                    init: function () {
-                        handleVideoPlayback(this);
-                    },
-                    slideChange: function () {
-                        handleVideoPlayback(this);
-                    }
+                    init: function () { handleVideoPlayback(this); },
+                    slideChange: function () { handleVideoPlayback(this); }
                 },
                 breakpoints: {
                     768: {
@@ -835,17 +694,12 @@
                 }
             });
 
-            // --- LÓGICA DEL FORMULARIO DE CONTACTO (SIMULACIÓN) ---
             const contactForm = document.getElementById('contact-form');
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
-                
-                // Recoger datos (opcional, para depuración)
                 const formData = new FormData(contactForm);
                 const service = formData.get('service');
-
                 alert(`¡Gracias por tu mensaje! Servicio seleccionado: ${service}. Te contactaré pronto con una propuesta. (Simulación de envío)`);
-                
                 contactForm.reset();
             });
 
