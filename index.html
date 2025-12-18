@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- VARIABLES GLOBALES (MANTENIDAS INTACTAS) --- */
+        /* --- VARIABLES GLOBALES --- */
         :root {
+            /* --- PALETA AMARILLO/ORO RESTAURADA --- */
             --primary-color: #FFC72C; /* Amarillo Oro para CTAs y acentos principales */
             --secondary-color: #E8A800; /* Amarillo oscuro para efectos hover */
             --dark-bg: #0A0A0A; /* Negro profundo, fondo principal */
@@ -39,6 +40,7 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
+            /* COMPENSACIÓN POR EL NAVBAR FIJO */
             padding-top: 70px; 
         }
 
@@ -62,27 +64,27 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(10, 10, 10, 0.95);
+            background-color: rgba(10, 10, 10, 0.95); /* Fondo oscuro semitransparente */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 999;
             padding: 15px 20px;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centrado de todos los elementos */
             align-items: center;
-            gap: 40px;
+            gap: 40px; /* Espaciado consistente entre elementos */
         }
 
         .navbar .nav-logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--title-color);
+            color: var(--title-color); /* Usamos el oro para el logo/nombre */
             text-decoration: none;
         }
 
         .navbar .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 30px; /* Espaciado entre enlaces */
             align-items: center;
         }
 
@@ -98,9 +100,10 @@
             color: var(--primary-color);
         }
 
+        /* Estilo específico para el CTA principal en el nav */
         .navbar .cta-nav-download {
             background-color: var(--primary-color);
-            color: var(--dark-bg);
+            color: var(--dark-bg); /* Texto oscuro para alto contraste */
             border-radius: 5px;
             padding: 8px 15px;
         }
@@ -113,7 +116,7 @@
         /* --- HEADER / BANNER --- */
         .header-banner {
             position: relative;
-            height: calc(100vh - 70px);
+            height: calc(100vh - 70px); /* Ajustamos la altura para no ocultarse bajo el navbar */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -145,20 +148,19 @@
         .header-banner h1 {
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             margin-bottom: 1rem;
-            color: var(--title-color);
+            color: var(--title-color); /* Aplicamos el oro al H1 */
         }
 
         .header-banner p {
             font-size: clamp(1rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
-            color: var(--text-light);
-            max-width: 800px; /* Mejora la legibilidad en pantallas grandes */
+            color: var(--text-light); /* Texto de la frase en blanco */
         }
 
         .cta-primary {
             display: inline-block;
             background-color: var(--primary-color);
-            color: var(--dark-bg);
+            color: var(--dark-bg); /* Texto oscuro para alto contraste */
             padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
@@ -177,13 +179,13 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: var(--title-color);
+            color: var(--title-color); /* Aplicamos el oro a los títulos de sección */
         }
 
         /* --- DISEÑO DE PORTAFOLIO (SWIPER) --- */
         .design-swiper {
             width: 100%;
-            padding: 20px 0 40px 0;
+            padding: 20px 0 40px 0; /* Padding para la paginación inferior */
         }
 
         .design-swiper .swiper-slide {
@@ -191,8 +193,9 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            /* Forzar una relación de aspecto consistente (ej. 4:3) */
             aspect-ratio: 4 / 3;
-            display: flex;
+            display: flex; /* Centra la imagen verticalmente si es necesario */
             align-items: center;
             justify-content: center;
         }
@@ -201,7 +204,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Hace que la imagen cubra el espacio sin deformarse */
         }
 
         .design-swiper .swiper-pagination-bullet {
@@ -233,7 +236,7 @@
         .slide-text h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            color: var(--title-color);
+            color: var(--title-color); /* Aplicamos el oro */
         }
         .slide-text p.role {
             color: var(--primary-color);
@@ -252,7 +255,7 @@
         .slide-media {
             flex: 1;
             background: #000;
-            position: relative;
+            position: relative; /* Necesario para el iframe */
         }
         .slide-media video,
         .slide-media iframe {
@@ -261,8 +264,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border: 0;
+            object-fit: cover; /* Mantiene la proporción y cubre el área */
+            border: 0; /* Quita el borde del iframe */
         }
         .swiper-button-next,
         .swiper-button-prev {
@@ -273,7 +276,7 @@
         .social-proof-links {
             margin-top: 20px;
             padding-top: 15px;
-            border-top: 1px solid #2e2e2e;
+            border-top: 1px solid #2e2e2e; /* Separador sutil */
         }
 
         .social-proof-links a {
@@ -286,21 +289,43 @@
             padding: 8px 15px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            color: var(--dark-bg);
+            color: var(--dark-bg); /* Texto oscuro por defecto para contraste */
         }
 
         .social-proof-links i {
             margin-right: 8px;
         }
 
-        .social-proof-links .btn-instagram { background-color: #E4405F; }
-        .social-proof-links .btn-instagram:hover { background-color: #c93751; }
-        .social-proof-links .btn-facebook { background-color: #1877F2; }
-        .social-proof-links .btn-facebook:hover { background-color: #1a5ac5; }
-        .social-proof-links .btn-tiktok { background-color: #000000; border: 1px solid var(--text-light); color: var(--text-light); }
-        .social-proof-links .btn-tiktok:hover { background-color: #333333; }
-        .social-proof-links .btn-linkedin { background-color: #0A66C2; }
-        .social-proof-links .btn-linkedin:hover { background-color: #074786; }
+        /* Estilos específicos para las redes sociales más comunes */
+        .social-proof-links .btn-instagram {
+            background-color: #E4405F; /* Instagram */
+        }
+        .social-proof-links .btn-instagram:hover {
+            background-color: #c93751;
+        }
+
+        .social-proof-links .btn-facebook {
+            background-color: #1877F2; /* Facebook */
+        }
+        .social-proof-links .btn-facebook:hover {
+            background-color: #1a5ac5;
+        }
+
+        .social-proof-links .btn-tiktok {
+            background-color: #000000; /* TikTok */
+            border: 1px solid var(--text-light);
+            color: var(--text-light); /* Excepción para TikTok */
+        }
+        .social-proof-links .btn-tiktok:hover {
+            background-color: #333333;
+        }
+
+        .social-proof-links .btn-linkedin {
+            background-color: #0A66C2; /* LinkedIn */
+        }
+        .social-proof-links .btn-linkedin:hover {
+            background-color: #074786;
+        }
         
         /* --- CONTACTO --- */
         .contact-section {
@@ -315,6 +340,7 @@
         }
         .contact-form input,
         .contact-form textarea,
+        /* Estilo para el campo <select> */
         .contact-form select { 
             background-color: var(--dark-bg);
             border: 1px solid #444;
@@ -327,11 +353,13 @@
             -moz-appearance: none;
             appearance: none;
         }
+        /* Estilo para el placeholder y opción deshabilitada en el <select> */
         .contact-form option:disabled,
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
             color: var(--gray-text);
         }
+        /* Fuerza el color blanco para las opciones seleccionables */
         .contact-form option {
             color: var(--text-light);
             background-color: var(--dark-bg);
@@ -339,7 +367,7 @@
         
         .contact-form button {
             background-color: var(--primary-color);
-            color: var(--dark-bg);
+            color: var(--dark-bg); /* Texto oscuro para alto contraste */
             border: none;
             padding: 15px;
             border-radius: 8px;
@@ -367,7 +395,7 @@
         }
         .cta-cv {
             background-color: var(--primary-color);
-            color: var(--dark-bg);
+            color: var(--dark-bg); /* Texto oscuro para alto contraste */
             padding: 10px 20px;
             border-radius: 50px;
             transition: background-color 0.3s ease;
@@ -383,9 +411,11 @@
                 gap: 15px;
                 padding: 15px;
             }
+            
             .navbar .nav-links {
                 gap: 20px;
             }
+            
             .slide-content {
                 flex-direction: column;
                 height: auto;
@@ -409,12 +439,12 @@
     
     <header class="header-banner">
         <video autoplay loop muted playsinline class="video-background">
-            <source src="media/Videobanner.mp4" type="video/mp4">
+            <source src="media/video-de-fondo.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
         
         <h1>Ingeniero Jhoan Antonio Rojas López</h1>
-        <!-- CAMBIO SOLICITADO: Nueva descripción profesional para el header -->
+        <!-- CORRECCIÓN Y REVERSIÓN: Se usa el texto que proporcionaste para el banner. -->
         <p>Soy Jhoan Rojas. Ingeniero en Sistemas experto en Marketing, SEO y contenido. Mi enfoque es simple: si hay un problema, lo soluciono; si no lo hay, busco cómo innovar tus resultados.</p>
         <a href="#contacto" class="cta-primary">Empecemos a Crear | Contactar</a>
     </header>
@@ -426,7 +456,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 1 -->
                             <h3>Ingeniería de Sistemas</h3>
                             <p class="role">Desarrollo de Aplicaciones</p>
                             <ul>
@@ -444,7 +473,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 2 -->
                             <h3>Estrategia & Growth en Bruli</h3>
                             <p class="role">Contenido y Edición Audiovisual</p>
                             <ul>
@@ -464,7 +492,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título y descripción para el Slide 3 -->
                             <h3>SEO & Automatización ITI</h3>
                             <p class="role">Posicionamiento y Marketing Automatizado</p>
                             <ul>
@@ -478,6 +505,42 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- CORRECCIÓN Y REVERSIÓN: Se añaden más slides vacíos para que puedas editarlos. -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h3>Nuevo Proyecto 4</h3>
+                            <p class="role">Tu Rol Aquí</p>
+                            <ul>
+                                <li><strong>Descripción:</strong> Escribe aquí la descripción de tu proyecto.</li>
+                                <li><strong>Métrica:</strong> Detalla las métricas clave o logros.</li>
+                                <li><strong>Resultado:</strong> Explica el resultado final y el impacto.</li>
+                            </ul>
+                        </div>
+                        <div class="slide-media">
+                            <img src="https://placehold.co/600x500/FFFFFF/000000?text=Imagen+del+Proyecto+4" alt="Imagen del Proyecto 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h3>Nuevo Proyecto 5</h3>
+                            <p class="role">Tu Rol Aquí</p>
+                            <ul>
+                                <li><strong>Descripción:</strong> Escribe aquí la descripción de tu proyecto.</li>
+                                <li><strong>Métrica:</strong> Detalla las métricas clave o logros.</li>
+                                <li><strong>Resultado:</strong> Explica el resultado final y el impacto.</li>
+                            </ul>
+                        </div>
+                        <div class="slide-media">
+                            <img src="https://placehold.co/600x500/FFFFFF/000000?text=Imagen+del+Proyecto+5" alt="Imagen del Proyecto 5">
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -515,7 +578,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 1 -->
                             <h3>Contenido Inmobiliario</h3>
                             <p class="role">Edición de Video para Ventas</p>
                             <ul>
@@ -535,7 +597,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 2 -->
                             <h3>Estrategia Marca Personal</h3>
                             <p class="role">Creación de Contenido de Autoridad</p>
                             <ul>
@@ -555,7 +616,6 @@
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <!-- CAMBIO SOLICITADO: Nuevo título, descripción y ruta de video para el Slide 3 -->
                             <h3>Automatización Educativa</h3>
                             <p class="role">Chatbots y Estrategia de Contenido</p>
                             <ul>
@@ -589,7 +649,7 @@
                 <option value="Filmmaking_Ads">Producción de Video Publicitario (Filmmaker)</option>
                 <option value="Design_Branding">Diseño Gráfico y Branding</option>
                 <option value="Full_Service">Servicio Integral (CM + Video + Diseño)</option>
-                <!-- CAMBIO SOLICITADO: Nueva opción en el formulario de contacto -->
+                <!-- CORRECCIÓN Y REVERSIÓN: Se añade la opción solicitada. -->
                 <option value="SEO_Automation">Optimización SEO y Automatización</option>
             </select>
             
@@ -615,10 +675,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
+            // Función para controlar videos en los sliders
             const handleVideoPlayback = (swiper) => {
+                // Pausar todos los videos
                 const allVideos = swiper.el.querySelectorAll('video');
                 allVideos.forEach(video => video.pause());
 
+                // Reproducir el video en el slide activo
                 const activeSlide = swiper.slides[swiper.activeIndex];
                 const activeVideo = activeSlide.querySelector('video');
                 if (activeVideo) {
@@ -626,24 +689,32 @@
                 }
             };
 
+            // --- INICIALIZACIÓN DE SWIPERS (REVERTIDA A LA VERSIÓN FUNCIONAL) ---
+            // Slider de Diseño Gráfico con autoplay y tamaño uniforme
             const designSwiper = new Swiper('.design-swiper', {
-                slidesPerView: 1,
+                slidesPerView: 1, // Muestra 1 slide en móviles
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
-                    delay: 2500,
+                    delay: 2500, // 2.5 segundos por slide
                     disableOnInteraction: false,
                 },
                 pagination: {
                     el: '.design-swiper .swiper-pagination',
                     clickable: true,
                 },
+                // Puntos de quiebre para mostrar más slides en pantallas más grandes
                 breakpoints: {
-                    640: { slidesPerView: 2; },
-                    1024: { slidesPerView: 3; }
+                    640: { // En tablets y más
+                        slidesPerView: 2,
+                    },
+                    1024: { // En desktops
+                        slidesPerView: 3,
+                    }
                 }
             });
 
+            // Slider de Trayectoria y Compromiso con autoplay
             const trayectoriaSwiper = new Swiper('.trayectoria-swiper', {
                 direction: 'horizontal',
                 slidesPerView: 1,
@@ -658,9 +729,14 @@
                     prevEl: '.trayectoria-swiper .swiper-button-prev',
                 },
                 on: {
-                    init: function () { handleVideoPlayback(this); },
-                    slideChange: function () { handleVideoPlayback(this); }
+                    init: function () {
+                        handleVideoPlayback(this);
+                    },
+                    slideChange: function () {
+                        handleVideoPlayback(this);
+                    }
                 },
+                // CORRECCIÓN Y REVERSIÓN: Se restaura la configuración de breakpoints que funcionaba.
                 breakpoints: {
                     768: {
                         slidesPerView: 1.2,
@@ -669,6 +745,7 @@
                 }
             });
 
+            // Slider Horizontal de Casos de Estudio con autoplay
             const caseStudiesSwiper = new Swiper('.case-studies-swiper', {
                 direction: 'horizontal',
                 slidesPerView: 1,
@@ -683,9 +760,14 @@
                     prevEl: '.case-studies-swiper .swiper-button-prev',
                 },
                 on: {
-                    init: function () { handleVideoPlayback(this); },
-                    slideChange: function () { handleVideoPlayback(this); }
+                    init: function () {
+                        handleVideoPlayback(this);
+                    },
+                    slideChange: function () {
+                        handleVideoPlayback(this);
+                    }
                 },
+                // CORRECCIÓN Y REVERSIÓN: Se restaura la configuración de breakpoints que funcionaba.
                 breakpoints: {
                     768: {
                         slidesPerView: 1.2,
@@ -694,12 +776,17 @@
                 }
             });
 
+            // --- LÓGICA DEL FORMULARIO DE CONTACTO (SIMULACIÓN) ---
             const contactForm = document.getElementById('contact-form');
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault(); 
+                
+                // Recoger datos (opcional, para depuración)
                 const formData = new FormData(contactForm);
                 const service = formData.get('service');
+
                 alert(`¡Gracias por tu mensaje! Servicio seleccionado: ${service}. Te contactaré pronto con una propuesta. (Simulación de envío)`);
+                
                 contactForm.reset();
             });
 
