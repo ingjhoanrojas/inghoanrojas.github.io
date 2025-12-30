@@ -111,7 +111,7 @@
             padding: 8px 15px;
         }
         
-        /* --- HEADER / BANNER --- */
+        /* --- HEADER / BANNER (MINIMALISTA) --- */
         .hero-banner {
             position: relative;
             height: 100vh;
@@ -122,16 +122,8 @@
             text-align: center;
             overflow: hidden;
             padding: 0 20px;
-        }
-
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
+            /* MODIFICACIÓN: Fondo de color sólido en lugar de imagen */
+            background-color: var(--light-bg);
         }
 
         .video-overlay {
@@ -216,7 +208,7 @@
             text-align: center;
         }
 
-        /* --- SECCIÓN DE APTITUDES ESTRATÉGICAS (NUEVA) --- */
+        /* --- SECCIÓN DE APTITUDES ESTRATÉGICAS --- */
         .aptitudes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -258,35 +250,31 @@
             line-height: 1.6;
         }
 
-        /* --- ESTILOS PARA EL SELLO DE GARANTÍA PROFESIONAL (ACTUALIZADO) --- */
-
-        /* Título de Contexto */
+        /* --- ESTILOS PARA EL SELLO DE GARANTÍA PROFESIONAL --- */
         .context-title {
             text-align: center;
             color: var(--text-light);
             font-size: 0.8rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-top: 60px; /* Separación de las tarjetas */
+            margin-top: 60px;
             margin-bottom: 20px;
             opacity: 0.7;
         }
 
-        /* Contenedor de la Cinta */
         .soft-skills-container {
             width: 100%;
-            overflow: hidden; /* Esencial para ocultar el contenido que se desplaza */
+            overflow: hidden;
             position: relative;
         }
 
         .infinite-tape {
             display: flex;
-            /* La animación se encarga del movimiento */
-            animation: moveLeft 30s linear infinite; /* Animación más lenta y suave */
-            background-color: var(--dark-bg); /* Fondo negro sólido */
-            border-top: 1px solid rgba(255, 199, 44, 0.3); /* Borde superior elegante */
-            border-bottom: 1px solid rgba(255, 199, 44, 0.3); /* Borde inferior elegante */
-            padding: 15px 0; /* Espacio interno para que las insignias no toquen los bordes */
+            animation: moveLeft 30s linear infinite;
+            background-color: var(--dark-bg);
+            border-top: 1px solid rgba(255, 199, 44, 0.3);
+            border-bottom: 1px solid rgba(255, 199, 44, 0.3);
+            padding: 15px 0;
         }
 
         .tape-content {
@@ -296,330 +284,30 @@
             padding: 0 20px;
         }
 
-        /* Estilo de las Insignias (Badges) */
         .badge {
-            background-color: #1A1A1A; /* Fondo gris muy oscuro */
-            border: 1px solid var(--primary-color); /* Borde fino amarillo */
-            border-radius: 50px; /* Forma de píldora */
-            padding: 5px 18px; /* Relleno cómodo */
-            margin: 0 10px; /* Separación entre insignias */
+            background-color: #1A1A1A;
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            padding: 5px 18px;
+            margin: 0 10px;
             font-size: 0.9rem;
             color: var(--text-light);
             font-weight: 500;
             display: inline-block;
         }
 
-        /* El separador hereda el color del contenedor para ser sutil */
         .tape-content > span:not(.badge) {
             color: var(--text-muted);
             font-size: 1.2rem;
             margin: 0 5px;
         }
 
-        /* --- ANIMACIÓN CLAVE @keyframes (ACTUALIZADA) --- */
         @keyframes moveLeft {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        /* --- SECCIÓN DE RECOMENDACIONES (NUEVA DISEÑO PREMIUM) --- */
-        .recommendations-section {
-            padding: 80px 20px; /* Padding generoso para separar de otros bloques */
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #000000; /* Fondo negro sólido */
-        }
-
-        .recommendations-section .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 3rem;
-            text-transform: uppercase; /* Título en mayúsculas */
-            letter-spacing: 2px;
-        }
-
-        .recommendations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 350px); /* Ancho fijo para las tarjetas */
-            gap: 50px; /* Gap generoso entre tarjetas */
-            justify-content: center; /* Centrar el bloque de tarjetas */
-            perspective: 1000px; /* Perspectiva 3D para evitar encimamiento */
-        }
-
-        .flip-card {
-            background-color: transparent;
-            width: 100%;
-            max-width: 350px; /* Ancho máximo fijo */
-            height: 450px;
-            margin: 0 auto; /* Centrado individual de la tarjeta */
-            perspective: 1000px; /* Perspectiva adicional para el flip */
-        }
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 25px; /* Redondeado aumentado */
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            padding: 30px;
-            background-color: var(--card-bg); /* Fondo gris muy oscuro */
-            border: 1px solid;
-            border-image: linear-gradient(to right, rgba(255, 199, 44, 0.1), rgba(255, 199, 44, 0.5), rgba(255, 199, 44, 0.1)) 1;
-        }
-
-        .flip-card-back {
-            transform: rotateY(180deg);
-            background-color: var(--card-bg); /* Mismo fondo que el frontal */
-            border: 1px solid;
-            border-image: linear-gradient(to right, rgba(255, 199, 44, 0.1), rgba(255, 199, 44, 0.5), rgba(255, 199, 44, 0.1)) 1;
-        }
-
-        .flip-card:hover {
-            box-shadow: 0 0 20px rgba(255, 199, 44, 0.3); /* Sombra dorada en hover */
-        }
-
-        /* Foto de perfil con borde doble */
-        .profile-container {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-        }
-
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 2;
-        }
-
-        .profile-border-outer {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            z-index: 1;
-        }
-
-        .profile-border-inner {
-            position: absolute;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background-color: #000000;
-            top: 5px;
-            left: 5px;
-            z-index: 1;
-        }
-
-        .recommendation-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text-light);
-            text-transform: uppercase; /* Nombre en mayúsculas */
-        }
-
-        .company-block {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .company-logo {
-            max-height: 25px;
-            object-fit: contain;
-            margin-right: 10px;
-            filter: grayscale(100%) brightness(0) invert(1); /* Logo en blanco monocromático */
-        }
-
-        .company-name {
-            font-size: 1rem;
-            color: var(--text-light);
-        }
-
-        .position {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        /* Badge central con fondo amarillo */
-        .role-badge {
-            background-color: var(--primary-color);
-            color: #000000;
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin: 15px 0;
-            display: inline-block;
-        }
-
-        /* Footer de la tarjeta */
-        .card-footer {
-            margin-top: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding-top: 15px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons i {
-            color: var(--text-muted);
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons i:hover {
-            color: var(--primary-color);
-        }
-
-        .view-testimonial {
-            display: flex;
-            align-items: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .view-testimonial:hover {
-            color: var(--primary-color);
-        }
-
-        .view-testimonial i {
-            margin-left: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .flip-card:hover .view-testimonial i {
-            transform: rotate(180deg);
-        }
-
-        .recommendation-text {
-            font-style: italic;
-            color: var(--text-light);
-            text-align: center;
-            line-height: 1.6;
-            position: relative;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
-
-        .recommendation-text::before {
-            content: '"';
-            font-size: 3rem;
-            color: var(--primary-color);
-            position: absolute;
-            top: -20px;
-            left: 0;
-            opacity: 0.5;
-        }
-
-        .recommendation-text::after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--primary-color);
-            position: absolute;
-            bottom: -40px;
-            right: 0;
-            opacity: 0.5;
-        }
-
-        /* --- BENTO GRID PARA DISEÑO GRÁFICO (FORMATO VERTICAL ÚNICO) --- */
-        .bento-grid-section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .bento-grid {
-            display: grid;
-            /* Crea columnas automáticas de un mínimo de 250px, con una altura de fila fija para aspecto vertical */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-auto-rows: 350px; /* Altura fija para mantener la proporción vertical */
-            gap: 15px;
-        }
-
-        .bento-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            background-color: var(--light-bg);
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .bento-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .bento-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-            transition: transform 0.4s ease;
-        }
-
-        .bento-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .bento-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: var(--text-light);
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .bento-item:hover .overlay {
-            opacity: 1;
-        }
-
-        /* --- SWIPERS PARA TRAYECTORIA Y VIDEOS (ESTRUCTURA ESCALABLE) --- */
+        /* --- SWIPERS PARA TRAYECTORIA Y VIDEOS --- */
         .swiper-section {
             padding: 80px 20px;
             max-width: 1200px;
@@ -638,7 +326,7 @@
         }
 
         .slide-text {
-            flex: 1; /* Ocupa el 40% del ancho en desktop */
+            flex: 1;
             padding: 40px;
             display: flex;
             flex-direction: column;
@@ -646,7 +334,7 @@
         }
 
         .slide-media {
-            flex: 1.5; /* Ocupa el 60% del ancho en desktop */
+            flex: 1.5;
             background: #000;
             position: relative;
         }
@@ -658,6 +346,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .slide-media iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .slide-text h3 {
@@ -688,66 +385,71 @@
             color: var(--primary-color);
         }
         
-        /* --- FORMULARIO DE CONTACTO --- */
-        .contact-section {
-            background-color: var(--light-bg);
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        /* --- ESTILOS ESPECÍFICOS PARA LA GALERÍA DE VIDEOS --- */
+        #portafolio-videos .swiper-slide {
+            height: 80vh; /* Altura grande para impacto visual */
+            width: 100%;
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            background-color: var(--dark-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-light);
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 1rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--primary-color);
+        #portafolio-videos .slide-media {
+            width: 100%;
+            height: 100%;
+            position: relative; /* El contenedor es relativo */
         }
         
-        .contact-form option {
-            background-color: var(--dark-bg);
+        /* --- BENTO GRID PARA DISEÑO GRÁFICO --- */
+        .bento-grid-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 350px;
+            gap: 15px;
+        }
+
+        .bento-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: var(--light-bg);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bento-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .bento-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .bento-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             color: var(--text-light);
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .contact-ctas {
-            margin-top: 30px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .contact-ctas a {
-            color: var(--primary-color);
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-ctas a:hover {
-            color: var(--secondary-color);
+        .bento-item:hover .overlay {
+            opacity: 1;
         }
 
         /* --- RESPONSIVE DESIGN --- */
@@ -768,14 +470,13 @@
 
             .slide-media {
                 height: 300px;
-                order: -1; /* Pone el video encima del texto en móvil */
+                order: -1;
             }
 
             .bento-grid {
-                grid-auto-rows: 280px; /* Ajusta altura en móvil */
+                grid-auto-rows: 280px;
             }
 
-            /* Responsive para Aptitudes Estratégicas */
             .aptitudes-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -799,85 +500,33 @@
                 margin: 0 8px;
             }
 
-            /* Estilos para la sección de recomendaciones en móvil */
-            .recommendations-grid {
-                display: none; /* Oculta las flip cards en móvil */
-            }
-
-            .recommendations-swiper-container {
-                display: block; /* Muestra el swiper en móvil */
-                padding: 0 20px;
-            }
-
-            .recommendation-card-mobile {
-                background-color: var(--card-bg);
-                border-radius: 25px;
-                padding: 30px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                border: 1px solid;
-                border-image: linear-gradient(to right, rgba(255, 199, 44, 0.1), rgba(255, 199, 44, 0.5), rgba(255, 199, 44, 0.1)) 1;
-            }
-
-            .recommendation-card-mobile .profile-img {
-                margin-bottom: 15px;
-            }
-
-            .recommendation-card-mobile .recommendation-name {
-                margin-bottom: 5px;
-            }
-
-            .recommendation-card-mobile .company-block {
-                margin-bottom: 5px;
-            }
-
-            .recommendation-card-mobile .position {
-                margin-bottom: 15px;
-            }
-
-            .recommendation-card-mobile .recommendation-text {
-                font-size: 0.9rem;
-                margin-bottom: 10px;
-            }
-        }
-
-        /* Estilos para desktop */
-        @media (min-width: 769px) {
-            .recommendations-swiper-container {
-                display: none; /* Oculta el swiper en desktop */
+            /* Ajustar altura de la galería de video en móvil */
+            #portafolio-videos .swiper-slide {
+                height: 60vh;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR (SIMPLIFICADA) -->
     <nav class="navbar">
         <a href="#" class="nav-logo">Jhoan Rojas</a>
         <ul class="nav-links">
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#aptitudes">Aptitudes</a></li>
-            <li><a href="#trayectoria">Trayectoria</a></li>
-            <li><a href="#recomendaciones">Recomendaciones</a></li>
-            <li><a href="#portafolio-diseno">Diseño</a></li>
+            <!-- MODIFICACIÓN: Navegación reducida a lo esencial -->
+            <li><a href="https://drive.google.com/uc?export=download&id=1RRrB7FcOEF1anunpm6h-GK8UDFX0Y3DS" download class="cta-nav-download"><i class="fas fa-download"></i> Descargar CV</a></li>
+            <li><a href="#portafolio-diseno">Diseños</a></li>
             <li><a href="#portafolio-videos">Videos</a></li>
-            <li><a href="#contacto">Contactar</a></li>
-            <li><a href="/path/to/tu-cv.pdf" download class="cta-nav-download"><i class="fas fa-download"></i> Descargar CV</a></li>
         </ul>
     </nav>
     
-    <!-- HEADER / BANNER -->
+    <!-- HEADER / BANNER (MINIMALISTA) -->
     <header class="hero-banner">
-        <video autoplay loop muted playsinline class="video-background">
-            <!--<source src="Media/Videobanner.mp4" type="video/mp4">--->
-        </video>
+        <!-- El botón CTA ha sido eliminado -->
         <div class="video-overlay"></div>
         
         <h1>Jhoan Antonio Rojas López</h1>
         <p class="subtitle">Ingeniero en Sistemas Computacionales</p>
-        <a href="#contacto" class="cta-button">Hablemos de tu próximo proyecto</a>
     </header>
     
     <!-- SECCIÓN DE HABILIDADES -->
@@ -924,67 +573,32 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE APTITUDES ESTRATÉGICAS (NUEVA SECCIÓN) -->
+    <!-- SECCIÓN DE APTITUDES ESTRATÉGICAS -->
     <section id="aptitudes" class="skills-section">
         <h2 class="section-title">Aptitudes Estratégicas</h2>
-        
-        <!-- Fila Superior: Aptitudes Técnicas -->
         <div class="aptitudes-grid">
             <div class="aptitud-card">
-                <div class="card-icon">
-                    <i class="fas fa-search"></i>
-                </div>
+                <div class="card-icon"><i class="fas fa-search"></i></div>
                 <h3>SEO de Contenidos</h3>
                 <p>Enfoque en visibilidad y arquitectura de información para maximizar el alcance orgánico y el posicionamiento en buscadores.</p>
             </div>
-            
             <div class="aptitud-card">
-                <div class="card-icon">
-                    <i class="fas fa-video"></i>
-                </div>
+                <div class="card-icon"><i class="fas fa-video"></i></div>
                 <h3>Eficacia Audiovisual</h3>
                 <p>Especialización en hooks efectivos, subtítulos dinámicos y técnicas de retención para maximizar el engagement en contenido multimedia.</p>
             </div>
-            
             <div class="aptitud-card">
-                <div class="card-icon">
-                    <i class="fas fa-comments"></i>
-                </div>
+                <div class="card-icon"><i class="fas fa-comments"></i></div>
                 <h3>Arquitectura de Flujos de Conversación</h3>
                 <p>Diseño e implementación de automatizaciones con ManyChat para optimizar la comunicación y convertir leads de manera efectiva.</p>
             </div>
         </div>
-
-        <!-- Título de Contexto para el Sello de Garantía -->
-        <h3 class="sub-section-title">APTITUDES PERSONALES</h3>
-            
-        <!-- Fila Inferior: Sello de Garantía Profesional (Soft Skills) -->
+        <h3 class="context-title">APTITUDES PERSONALES</h3>
         <div class="soft-skills-container">
             <div class="infinite-tape">
                 <div class="tape-content">
-                    <span class="badge">Responsable</span>
-                    <span>•</span>
-                    <span class="badge">Organizado</span>
-                    <span>•</span>
-                    <span class="badge">Puntual</span>
-                    <span>•</span>
-                    <span class="badge">Proactivo</span>
-                    <span>•</span>
-                    <span class="badge">Aprende rápido</span>
-                    <span>•</span>
-                    <span class="badge">Trabajo en Equipo</span>
-                    <!-- Se duplica el contenido para un bucle infinito sin saltos -->
-                    <span class="badge">Responsable</span>
-                    <span>•</span>
-                    <span class="badge">Organizado</span>
-                    <span>•</span>
-                    <span class="badge">Puntual</span>
-                    <span>•</span>
-                    <span class="badge">Proactivo</span>
-                    <span>•</span>
-                    <span class="badge">Aprende rápido</span>
-                    <span>•</span>
-                    <span class="badge">Trabajo en Equipo</span>
+                    <span class="badge">Responsable</span><span>•</span><span class="badge">Organizado</span><span>•</span><span class="badge">Puntual</span><span>•</span><span class="badge">Proactivo</span><span>•</span><span class="badge">Aprende rápido</span><span>•</span><span class="badge">Trabajo en Equipo</span>
+                    <span class="badge">Responsable</span><span>•</span><span class="badge">Organizado</span><span>•</span><span class="badge">Puntual</span><span>•</span><span class="badge">Proactivo</span><span>•</span><span class="badge">Aprende rápido</span><span>•</span><span class="badge">Trabajo en Equipo</span>
                 </div>
             </div>
         </div>
@@ -995,71 +609,67 @@
         <h2 class="section-title">Mi Trayectoria Laboral</h2>
         <div class="swiper trayectoria-swiper">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="slide-content">
-                        <div class="slide-text">
-                            <h3>Bruli</h3>
-                            <p class="role">Growth Marketing (Junio - Noviembre 2024)</p>
-                            <ul>
-                                <li><strong>Enfoque:</strong> Social Media & Community Management.</li>
-                                <li><strong>Tareas:</strong> Estrategia de contenido, grabación y edición audiovisual.</li>
-                                <li><strong>Herramienta:</strong> Uso experto de DaVinci Resolve para producción de alto impacto.</li>
-                            </ul>
-                        </div>
-                        <div class="slide-media">
-                            <img //src="https://placehold.co/600x500/FFC72C/000000?text=Bruli+Growth" alt="Bruli Growth Marketing">
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
                             <h3>Instituto Tecnológico del Istmo</h3>
-                            <p class="role">Community Manager & Developer (Julio 2024 - Julio 2025)</p>
+                            <p class="role">Desarrollador de Software y Estratega Digital (Julio 2024 - Julio 2025)</p>
                             <ul>
-                                <li><strong>Redes Sociales:</strong> Creación y gestión de IG, TikTok y YouTube.</li>
-                                <li><strong>Automatización:</strong> Desarrollo de ChatBots con ManyChat.</li>
-                                <li><strong>Desarrollo:</strong> Diseño y programación de App móvil para gestión de calificaciones.</li>
+                                <li><strong>Desarrollé</strong> una <strong>App móvil</strong> para la gestión de calificaciones.</li>
+                                <li><strong>Lideré</strong> una estrategia <strong>omnicanal</strong> en <strong>TikTok, IG y YT</strong>.</li>
+                                <li><strong>Automatizé</strong> la comunicación con <strong>ChatBots</strong> usando <strong>ManyChat</strong>.</li>
                             </ul>
                         </div>
                         <div class="slide-media">
-                            <img //src="https://placehold.co/600x500/1E1E1E/FFFFFF?text=ITI+Social+Media" alt="Instituto Tecnológico del Istmo">
+                            <video src="ruta/a/tu-video-iti-lenguas.mp4" muted loop playsinline></video>
                         </div>
                     </div>
                 </div>
-                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <h3>Bruli | Growth Marketing</h3>
+                            <p class="role">Especialista en Marketing Digital (2023 - 2025, Intermitente)</p>
+                            <ul>
+                                <li><strong>Gestioné</strong> comunidades y <strong>Social Media</strong> para impulsar el engagement.</li>
+                                <li><strong>Produje</strong> contenido <strong>audiovisual</strong> de alto impacto para campañas de crecimiento.</li>
+                                <li><strong>Administré</strong> el <strong>CRM</strong> con <strong>HubSpot</strong> para optimizar la relación con clientes.</li>
+                            </ul>
+                        </div>
+                        <div class="slide-media">
+                            <video src="ruta/a/tu-video-bruli.mp4" muted loop playsinline></video>
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
                             <h3>Consultorio Dental Especializado</h3>
-                            <p class="role">Web Developer & SEO Specialist</p>
+                            <p class="role">Desarrollador Web Freelance (Proyecto)</p>
                             <ul>
-                                <li><strong>Diseño y Programación:</strong> Creación completa de sitio web institucional.</li>
-                                <li><strong>Tecnología:</strong> Desarrollo robusto en WordPress.</li>
-                                <li><strong>Posicionamiento:</strong> Implementación de estrategia SEO para mejorar visibilidad local.</li>
+                                <li><strong>Diseñé</strong> y <strong>desarrollé</strong> un sitio web corporativo en <strong>WordPress</strong>.</li>
+                                <li><strong>Optimicé</strong> el posicionamiento <strong>SEO local</strong> para captar nuevos pacientes.</li>
+                                <li><strong>Implementé</strong> un sistema de citas online para mejorar la conversión de leads.</li>
                             </ul>
                         </div>
                         <div class="slide-media">
-                            <img //src="https://placehold.co/600x500/28a745/FFFFFF?text=Sitio+Web+Dental" alt="Consultorio Dental Web">
+                            <video src="ruta/a/tu-video-consultorio.mp4" muted loop playsinline></video>
                         </div>
                     </div>
                 </div>
-                <!-- Slide 4 -->
                 <div class="swiper-slide">
                     <div class="slide-content">
                         <div class="slide-text">
-                            <h3>Residencia Profesional ITI</h3>
-                            <p class="role">Mobile App Developer</p>
+                            <h3>Instituto Tecnológico del Istmo (Residencia)</h3>
+                            <p class="role">Desarrollador de Apps Móviles (Ene - Jun 2023)</p>
                             <ul>
-                                <li><strong>Proyecto:</strong> Diseño y programación de App móvil para gestión de tutorías.</li>
-                                <li><strong>Tecnologías:</strong> Android Studio (Java) para el frontend y Firebase para el backend.</li>
-                                <li><strong>Funcionalidad:</strong> Sistema de agendamiento, gestión de tutores y seguimiento de progreso.</li>
+                                <li><strong>Diseñé</strong> e <strong>implementé</strong> una <strong>App móvil nativa</strong> para gestión de tutorías.</li>
+                                <li><strong>Programé</strong> la arquitectura usando <strong>Android Studio</strong> y Java/Kotlin.</li>
+                                <li><strong>Integré</strong> <strong>Firebase</strong> para la gestión de datos en tiempo real.</li>
                             </ul>
                         </div>
                         <div class="slide-media">
-                            <img //src="https://placehold.co/600x500/007bff/FFFFFF?text=App+Tutorías+ITI" alt="App de Residencia Profesional">
+                            <video src="ruta/a/tu-video-residencia.mp4" muted loop playsinline></video>
                         </div>
                     </div>
                 </div>
@@ -1069,305 +679,48 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE RECOMENDACIONES (NUEVA DISEÑO PREMIUM) -->
-    <section id="recomendaciones" class="recommendations-section">
-        <h2 class="section-title">VALIDACIONES PROFESIONALES</h2>
-        
-        <!-- Versión Desktop: Flip Cards -->
-        <div class="recommendations-grid">
-            <!-- Recomendación 1: Miriam -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="profile-container">
-                            <div class="profile-border-outer"></div>
-                            <div class="profile-border-inner"></div>
-                            <img //src="path/to/foto-miriam.jpg" alt="Miriam Sánchez" class="profile-img">
-                        </div>
-                        <h3 class="recommendation-name">Miriam Sánchez de la Cruz</h3>
-                        <div class="company-block">
-                            <img //src="path/to/logo-iti.png" alt="Instituto Tecnológico del Istmo" class="company-logo">
-                            <span class="company-name">Instituto Tecnológico del Istmo</span>
-                        </div>
-                        <p class="position">Directora de Carrera</p>
-                        <div class="role-badge">JEFE DIRECTO | POST-PRODUCCIÓN</div>
-                        <div class="card-footer">
-                            <div class="social-icons">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="view-testimonial">
-                                Ver testimonio <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="recommendation-text">
-                            Jhoan ha sido uno de los estudiantes más destacados que he tenido en mi carrera. Su capacidad para combinar conocimientos técnicos de sistemas con habilidades de marketing digital es excepcional. Los proyectos que desarrolló durante su residencia profesional superaron todas nuestras expectativas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recomendación 2: Gustavo -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="profile-container">
-                            <div class="profile-border-outer"></div>
-                            <div class="profile-border-inner"></div>
-                            <img //src="path/to/foto-gustavo.jpg" alt="Gustavo Castellanos" class="profile-img">
-                        </div>
-                        <h3 class="recommendation-name">Gustavo Castellanos Ibarra</h3>
-                        <div class="company-block">
-                            <img //src="path/to/logo-bruli.png" alt="Bruli" class="company-logo">
-                            <span class="company-name">Bruli</span>
-                        </div>
-                        <p class="position">CEO & Fundador</p>
-                        <div class="role-badge">JEFE DIRECTO | MARKETING DIGITAL</div>
-                        <div class="card-footer">
-                            <div class="social-icons">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="view-testimonial">
-                                Ver testimonio <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="recommendation-text">
-                            Contratar a Jhoan fue una de las mejores decisiones que tomamos para nuestro equipo de growth. No solo domina las herramientas técnicas, sino que entiende perfectamente cómo aplicarlas para generar resultados reales. Su trabajo en nuestras campañas de video aumentó significativamente nuestro engagement.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recomendación 3: Samuel -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="profile-container">
-                            <div class="profile-border-outer"></div>
-                            <div class="profile-border-inner"></div>
-                            <img //src="path/to/foto-samuel.jpg" alt="Samuel" class="profile-img">
-                        </div>
-                        <h3 class="recommendation-name">Samuel</h3>
-                        <div class="company-block">
-                            <img //src="path/to/logo-bruli.png" alt="Bruli" class="company-logo">
-                            <span class="company-name">Bruli</span>
-                        </div>
-                        <p class="position">Head of Marketing</p>
-                        <div class="role-badge">COLEGA | ESTRATEGIA DE CONTENIDOS</div>
-                        <div class="card-footer">
-                            <div class="social-icons">
-                                <i class="fab fa-linkedin"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="view-testimonial">
-                                Ver testimonio <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <p class="recommendation-text">
-                            Trabajar con Jhoan ha sido una experiencia increíble. Su capacidad para adaptarse rápidamente a nuevas tecnologías y su enfoque estratégico en cada proyecto lo convierten en un profesional muy valioso. Las automatizaciones que implementó para nuestros flujos de conversación mejoraron nuestra tasa de conversión en un 40%.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Versión Móvil: Swiper -->
-        <div class="recommendations-swiper-container">
-            <div class="swiper recommendations-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1: Miriam -->
-                    <div class="swiper-slide">
-                        <div class="recommendation-card-mobile">
-                            <div class="profile-container">
-                                <div class="profile-border-outer"></div>
-                                <div class="profile-border-inner"></div>
-                                <img //src="path/to/foto-miriam.jpg" alt="Miriam Sánchez" class="profile-img">
-                            </div>
-                            <h3 class="recommendation-name">Miriam Sánchez de la Cruz</h3>
-                            <div class="company-block">
-                                <img //src="path/to/logo-iti.png" alt="Instituto Tecnológico del Istmo" class="company-logo">
-                                <span class="company-name">Instituto Tecnológico del Istmo</span>
-                            </div>
-                            <p class="position">Directora de Carrera</p>
-                            <div class="role-badge">JEFE DIRECTO | POST-PRODUCCIÓN</div>
-                            <p class="recommendation-text">
-                                Jhoan ha sido uno de los estudiantes más destacados que he tenido en mi carrera. Su capacidad para combinar conocimientos técnicos de sistemas con habilidades de marketing digital es excepcional. Los proyectos que desarrolló durante su residencia profesional superaron todas nuestras expectativas.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2: Gustavo -->
-                    <div class="swiper-slide">
-                        <div class="recommendation-card-mobile">
-                            <div class="profile-container">
-                                <div class="profile-border-outer"></div>
-                                <div class="profile-border-inner"></div>
-                                <img //src="path/to/foto-gustavo.jpg" alt="Gustavo Castellanos" class="profile-img">
-                            </div>
-                            <h3 class="recommendation-name">Gustavo Castellanos Ibarra</h3>
-                            <div class="company-block">
-                                <img //src="path/to/logo-bruli.png" alt="Bruli" class="company-logo">
-                                <span class="company-name">Bruli</span>
-                            </div>
-                            <p class="position">CEO & Fundador</p>
-                            <div class="role-badge">JEFE DIRECTO | MARKETING DIGITAL</div>
-                            <p class="recommendation-text">
-                                Contratar a Jhoan fue una de las mejores decisiones que tomamos para nuestro equipo de growth. No solo domina las herramientas técnicas, sino que entiende perfectamente cómo aplicarlas para generar resultados reales. Su trabajo en nuestras campañas de video aumentó significativamente nuestro engagement.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3: Samuel -->
-                    <div class="swiper-slide">
-                        <div class="recommendation-card-mobile">
-                            <div class="profile-container">
-                                <div class="profile-border-outer"></div>
-                                <div class="profile-border-inner"></div>
-                                <img //src="path/to/foto-samuel.jpg" alt="Samuel" class="profile-img">
-                            </div>
-                            <h3 class="recommendation-name">Samuel</h3>
-                            <div class="company-block">
-                                <img //src="path/to/logo-bruli.png" alt="Bruli" class="company-logo">
-                                <span class="company-name">Bruli</span>
-                            </div>
-                            <p class="position">Head of Marketing</p>
-                            <div class="role-badge">COLEGA | ESTRATEGIA DE CONTENIDOS</div>
-                            <p class="recommendation-text">
-                                Trabajar con Jhoan ha sido una experiencia increíble. Su capacidad para adaptarse rápidamente a nuevas tecnologías y su enfoque estratégico en cada proyecto lo convierten en un profesional muy valioso. Las automatizaciones que implementó para nuestros flujos de conversación mejoraron nuestra tasa de conversión en un 40%.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENTO GRID PARA DISEÑO GRÁFICO (FORMATO VERTICAL) -->
+    <!-- BENTO GRID PARA DISEÑO GRÁFICO -->
     <section id="portafolio-diseno" class="bento-grid-section">
         <h2 class="section-title">Portafolio de Diseño Gráfico</h2>
         <div class="bento-grid">
-            <div class="bento-item">
-                <img //src="https://placehold.co/400x500/FFC72C/000000?text=Diseño+1" alt="Diseño Gráfico 1">
-                <div class="overlay"><p>Proyecto de Branding Corporativo</p></div>
-            </div>
-            <div class="bento-item">
-                <img //src="https://placehold.co/400x500/E8A800/000000?text=Diseño+2" alt="Diseño Gráfico 2">
-                <div class="overlay"><p>Campaña para Redes Sociales</p></div>
-            </div>
-            <div class="bento-item">
-                <img //src="https://placehold.co/400x500/1E1E1E/FFFFFF?text=Diseño+3" alt="Diseño Gráfico 3">
-                <div class="overlay"><p>Diseño de Interfaz de App</p></div>
-            </div>
-            <div class="bento-item">
-                <img //src="https://placehold.co/400x500/007bff/FFFFFF?text=Diseño+4" alt="Diseño Gráfico 4">
-                <div class="overlay"><p>Packaging de Producto</p></div>
-            </div>
-            <div class="bento-item">
-                <img //src="https://placehold.co/400x500/28a745/FFFFFF?text=Diseño+5" alt="Diseño Gráfico 5">
-                <div class="overlay"><p>Identidad Visual Completa</p></div>
-            </div>
+            <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery03/515d3dd0.jpg?v=4bb6c48b" alt="Diseño Gráfico 1"><div class="overlay"><p>Proyecto de Branding Corporativo</p></div></div>
+            <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery03/581e34de.jpg?v=4bb6c48b" alt="Diseño Gráfico 2"><div class="overlay"><p>Campaña para Redes Sociales</p></div></div>
+            <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery03/01127585.jpg?v=4bb6c48b" alt="Diseño Gráfico 3"><div class="overlay"><p>Diseño de Interfaz de App</p></div></div>
+            <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery04/66ddb1f2.jpg?v=4bb6c48b" alt="Diseño Gráfico 4"><div class="overlay"><p>Packaging de Producto</p></div></div>
+            <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery02/ee04f17e.jpg?v=4bb6c48b" alt="Diseño Gráfico 5"><div class="overlay"><p>Identidad Visual Completa</p></div></div>
+                    <div class="bento-item"><img src="https://ingjhoanantrojaslpz.carrd.co/assets/images/gallery10/681e72bd.jpg?v=4bb6c48b" alt="Diseño Gráfico 5"><div class="overlay"><p>Identidad Visual Completa</p></div></div>
+
         </div>
     </section>
 
-    <!-- SECCIÓN DE PORTAFOLIO DE VIDEOS (ESTRUCTURA ESCALABLE) -->
+    <!-- SECCIÓN DE PORTAFOLIO DE VIDEOS (GALERÍA PURA) -->
     <section id="portafolio-videos" class="swiper-section">
         <h2 class="section-title">Portafolio de Videos</h2>
         <div class="swiper case-studies-swiper">
             <div class="swiper-wrapper">
-                <!-- Placeholder 1 -->
                 <div class="swiper-slide video-slide">
-                    <div class="slide-content">
-                        <div class="slide-media">
-                            <video controls muted loop>
-                                <source //src="media/video-placeholder-1.mp4" type="video/mp4">
-                                Tu navegador no soporta el tag de video.
-                            </video>
-                        </div>
-                        <div class="slide-text">
-                            <h3>Título del Video 1</h3>
-                            <p class="role">Rol / Cliente</p>
-                            <ul>
-                                <li><strong>Descripción breve:</strong> Aquí va una descripción concisa del proyecto y su objetivo.</li>
-                                <li><strong>Logro clave:</strong> Menciona el resultado más importante o la métrica destacada.</li>
-                            </ul>
-                        </div>
+                    <div class="slide-media">
+                        <iframe src="https://www.youtube.com/embed/Z1Auxqm0VEA?&autoplay=1&mute=1&loop=1&playlist=Z1Auxqm0VEA&controls=0&modestbranding=1&rel=0" title="Video de Portafolio 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- Placeholder 2 -->
                 <div class="swiper-slide video-slide">
-                    <div class="slide-content">
-                        <div class="slide-media">
-                            <video controls muted loop>
-                                <source //src="media/video-placeholder-2.mp4" type="video/mp4">
-                                Tu navegador no soporta el tag de video.
-                            </video>
-                        </div>
-                        <div class="slide-text">
-                            <h3>Título del Video 2</h3>
-                            <p class="role">Rol / Cliente</p>
-                            <ul>
-                                <li><strong>Descripción breve:</strong> Aquí va una descripción concisa del proyecto y su objetivo.</li>
-                                <li><strong>Logro clave:</strong> Menciona el resultado más importante o la métrica destacada.</li>
-                            </ul>
-                        </div>
+                    <div class="slide-media">
+                        <iframe src="https://www.youtube.com/embed/Msk54btf1KA?&autoplay=1&mute=1&loop=1&playlist=Msk54btf1KA&controls=0&modestbranding=1&rel=0" title="Video de Portafolio 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- Placeholder 3 -->
                 <div class="swiper-slide video-slide">
-                    <div class="slide-content">
-                        <div class="slide-media">
-                            <video controls muted loop>
-                                <source //src="media/video-placeholder-3.mp4" type="video/mp4">
-                                Tu navegador no soporta el tag de video.
-                            </video>
-                        </div>
-                        <div class="slide-text">
-                            <h3>Título del Video 3</h3>
-                            <p class="role">Rol / Cliente</p>
-                            <ul>
-                                <li><strong>Descripción breve:</strong> Aquí va una descripción concisa del proyecto y su objetivo.</li>
-                                <li><strong>Logro clave:</strong> Menciona el resultado más importante o la métrica destacada.</li>
-                            </ul>
-                        </div>
+                    <div class="slide-media">
+                        <iframe src="https://www.youtube.com/embed/X-UFItxB69Q?&autoplay=1&mute=1&loop=1&playlist=X-UFItxB69Q&controls=0&modestbranding=1&rel=0" title="Video de Portafolio 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide video-slide">
+                    <div class="slide-media">
+                        <iframe src="https://www.youtube.com/embed/DLfeZHFtGrs?&autoplay=1&mute=1&loop=1&playlist=DLfeZHFtGrs&controls=0&modestbranding=1&rel=0" title="Video de Portafolio 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE CONTACTO -->
-    <section id="contacto" class="contact-section">
-        <h2 class="section-title">Hablemos de tu próximo proyecto</h2>
-        <form id="contact-form" class="contact-form">
-            <input type="text" name="name" placeholder="Tu Nombre Completo" required>
-            <input type="email" name="email" placeholder="Email Empresarial" required>
-            <select name="service" required>
-                <option value="" disabled selected>Estoy Interesado en...</option>
-                <option value="CM_Strategy">Estrategia y Gestión de Redes Sociales</option>
-                <option value="Filmmaking_Ads">Producción de Video Publicitario</option>
-                <option value="Design_Branding">Diseño Gráfico y Branding</option>
-                <option value="Full_Service">Servicio Integral (CM + Video + Diseño)</option>
-                <option value="SEO_Automation">Optimización SEO y Automatización</option>
-            </select>
-            <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto y objetivos." required></textarea>
-            <button type="submit" class="cta-button">Enviar Propuesta de Colaboración</button>
-        </form>
-        <div class="contact-ctas">
-            <a href="https://linkedin.com/in/tu-perfil" target="_blank"><i class="fab fa-linkedin"></i> Ver Perfil de LinkedIn</a>
-            <a href="/path/to/tu-cv.pdf" download class="cta-button"><i class="fas fa-download"></i> Descargar CV</a>
         </div>
     </section>
 
@@ -1375,60 +728,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
-            // --- INICIALIZACIÓN DE SWIPERS ---
             const trayectoriaSwiper = new Swiper('.trayectoria-swiper', {
-                direction: 'horizontal',
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.trayectoria-swiper .swiper-button-next',
-                    prevEl: '.trayectoria-swiper .swiper-button-prev',
-                },
+                direction: 'horizontal', slidesPerView: 1, spaceBetween: 30, loop: true,
+                autoplay: { delay: 5000, disableOnInteraction: false, },
+                navigation: { nextEl: '.trayectoria-swiper .swiper-button-next', prevEl: '.trayectoria-swiper .swiper-button-prev', },
             });
 
             const caseStudiesSwiper = new Swiper('.case-studies-swiper', {
-                direction: 'horizontal',
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.case-studies-swiper .swiper-button-next',
-                    prevEl: '.case-studies-swiper .swiper-button-prev',
-                },
-            });
-
-            // --- SWIPER PARA RECOMENDACIONES (SOLO EN MÓVIL) ---
-            const recommendationsSwiper = new Swiper('.recommendations-swiper', {
-                direction: 'horizontal',
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-
-            // --- LÓGICA DEL FORMULARIO DE CONTACTO (SIMULACIÓN) ---
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); 
-                alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-                contactForm.reset();
+                direction: 'horizontal', slidesPerView: 1, spaceBetween: 30, loop: true,
+                autoplay: { delay: 5000, disableOnInteraction: false, },
+                navigation: { nextEl: '.case-studies-swiper .swiper-button-next', prevEl: '.case-studies-swiper .swiper-button-prev', },
             });
         });
     </script>
